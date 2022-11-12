@@ -9,6 +9,4 @@ Feature: US04:Métodos de pago
     Then le llegará una notificación al correo de las tareas que se le han asignado
 
     Examples:
-        | Registrase              |
-        | Crear cuenta con Google | 
-        | Crear cuenta con Correo | 
+        | Se vera que se pude pagar con visa, mastercard, plin o yape | 
