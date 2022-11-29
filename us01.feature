@@ -1,19 +1,21 @@
-Feature: US01: RESERVA EN TRANSPORTE PARA PASAJEROS
-  Como usuario, deseo reservar un viaje indicando las especificaciones del viaje así
-  como el modelo de bus. Para confirmar la reserva pagando el precio respectivo con 
-  el método de pago de mi conveniencia, asegurando un asiento dentro del bus.
- 
-    Scenario:Reservo un viaje para pasajero
-    Given el usuario ingresará los datos especificando la fecha, hora de viaje y
-    la ruta destino seleccionando el modelo de bus de su preferencia.
-    When  el usuario desee pagar su reserva
-    Then se verá que puede pagar en efectivo o con tarjeta de 
-    debito o crédito y se le asignará un asiento en el bus a viajar.
+Feature: US01: RESERVA DE VIAJE
+ Como usuario me gustaría poder registrar mi viaje indicando fecha, 
+ hora y lugar de destino pudiendo hacer el pago en efectivo, 
+ con tarjeta de débito o crédito dentro de las 8 a 48 horas antes del viaje.
 
+    Scenario:Reserva de viaje
+    Given el usuario ha proporcionado sus datos
+      Y se encuentra escogiendo la fecha, hora y lugar de destino
+    When  escoja la fecha, hora y lugar de destino
+      Y seleccionar reservar
+    Then el sistema verificada los datos proporcionados
+      Y le mostrará una pantalla en la cual podrá leer 
+      “Registro exitoso, puede realizar el pago dentro de las 48 horas antes de su viaje”
 
     Example:
+        | Nombre completo: Carlos Murillo Zárate |
         | Fecha: 29/11/2022 | 
-        | Hora de salida: 9:00 am |
-        | Destino: Paracas |
-        | Modelo: Bus/Cama |
+        | Hora de salida: 11:00 am |
+        | Destino: Piura |
+        | Modelo: Bus-Cama |
 
