@@ -1,23 +1,19 @@
-Feature: US01: Crear Usuario - Pacientes
-    Como psicólogo necesito ingresar a nuevos pacientes para mantener su información
-    actualizada
-    
-    Scenario: Si ingresa un paciente nuevo deseo poder crearle un perfil nuevo.
-    Given el psicólogo necesita poder crear perfiles para sus nuevos pacientes
-    When  el psicólogo quiera ingresar un nuevo perfil podrá visualizar una opción de 
-    registrar nuevo paciente.
-    Then se abrirá una sección donde se llene toda la información básica del paciente.
+Feature: US01: RESERVA EN TRANSPORTE PARA PASAJEROS
+  Como usuario, deseo reservar un viaje indicando las especificaciones del viaje así
+  como el modelo de bus. Para confirmar la reserva pagando el precio respectivo con 
+  el método de pago de mi conveniencia, asegurando un asiento dentro del bus.
+ 
+    Scenario:Reservo un viaje para pasajero
+    Given el usuario ingresará los datos especificando la fecha, hora de viaje y
+    la ruta destino seleccionando el modelo de bus de su preferencia.
+    When  el usuario desee pagar su reserva
+    Then se verá que puede pagar en efectivo o con tarjeta de 
+    debito o crédito y se le asignará un asiento en el bus a viajar.
+
 
     Example:
-        | Crear Ficha de usuario  | 
-
-    Scenario 2: Actualizar la información personal del perfil.
-    Given  la información del usuario puede cambiar a lo largo del tiempo, es necesario 
-    mantenerlo actualizado para no perder
-    datos.
-    When un paciente cambia de estado civil, se requiere cambiar los datos del perfil
-    Then dentro del perfil del paciente se visualizará la opción de editar el usuario.
-
-    Example:
-        | Ajustar inforción de ficha | 
+        | Fecha: 29/11/2022 | 
+        | Hora de salida: 9:00 am |
+        | Destino: Paracas |
+        | Modelo: Bus/Cama |
 
